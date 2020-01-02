@@ -1,0 +1,38 @@
+extern int getarg(int);
+extern float getargf(int);
+
+def int run(int $a, int $b) {
+    int $z = $a;
+    if ($a < $b)
+        return 0;
+    return 1;
+}
+
+def int myfunc(int $a, int $b) {
+    ref int $z = $a;
+    if ($a < $b)
+        return 0;
+
+    run($a, $b);
+    return 1;
+}
+
+def int fib (int $n) {
+    if ($n < 2)
+        if ($n == 0)
+            return 0;
+        else
+            return 1;
+
+    bool $d = false;
+    bool $e = $d || true;
+
+    int $a = $n;
+    int $b = $n;
+
+    int $f = myfunc($a, $b);
+    
+    int $c = myfunc($n - 1, $b);
+    return $a + $b;
+}
+

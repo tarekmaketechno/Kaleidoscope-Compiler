@@ -1,0 +1,44 @@
+extern int getarg(int);
+
+# Remainder when a / b
+def cint modulus(cint $a, cint $b) {
+	cint $result = ($a - (($a / $b) * $b));
+	# print($result);
+	return $result;
+}
+
+
+# Reeeeeeally bad algorithm here
+def cint check_factors(cint $a, cint $b) {
+	cint $bestguess = 1;
+	cint $guess = 2;
+	cint $zero = 0;
+	cint $one = 1;
+
+	while($guess < $a && $guess < $b) {
+		if (modulus($a, $guess) == $zero && modulus($b, $guess) == $zero) {
+			if($guess > $bestguess) {
+				$bestguess = $guess;
+			}
+		}
+		$guess = $guess + $one;
+	}
+	return $bestguess;
+
+}
+
+def int run() {
+	print("Running GCF Program!");
+	cint $n = [cint] getarg(1);
+	cint $m = [cint] getarg(0);
+
+	cint $r = check_factors($m, $n);
+
+	#literally only repeating to take more time...
+
+
+	print($r);
+	return 0;
+	
+}
+

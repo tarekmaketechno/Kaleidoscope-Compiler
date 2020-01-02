@@ -1,0 +1,5 @@
+bin/*
+build/*
+src/test
+*.sw*
+.ipynb_checkpoints/*

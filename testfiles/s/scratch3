@@ -1,0 +1,4 @@
+def int run() {
+   int $b = 100;
+   return $b;
+}

@@ -1,0 +1,31 @@
+extern int getarg(int);
+
+
+def bool isprime(int $n) {
+	int $k = 0;
+	int $i = 2;
+	while($i < ($n / 2)) {
+		$k = $n / $i;
+		if (($k * $i) == $n) {
+			return false;
+		}
+		$i = $i + 1;
+	}
+	# print($n);
+	return true;
+}
+
+def int run() {
+	print("Running Sieve Program!");
+	int $n = getarg(0);
+	int $largest = 0;
+	while($n > 0) {
+		if(isprime($n) && $n > $largest) {
+			$largest = $n;
+		}
+		$n = $n - 1;
+	}
+	print($largest);
+	return 0;
+}
+

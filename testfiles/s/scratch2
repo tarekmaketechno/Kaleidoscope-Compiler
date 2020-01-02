@@ -1,0 +1,56 @@
+extern int getarg(int);
+
+def int fuck_the_feds(ref int $k) {
+   $k = $k + 10;
+   return 0;
+}
+
+def cint cint_add_o_matic(cint $j, cint $k) {
+   return $j + $k;
+}
+
+def int run() {
+
+   int $a = 50;
+   ref int $b = $a;
+   
+   $b = $b + 16;
+   if ($a > 3) {
+        $b = 2;
+   } 
+
+   int $l = 0;
+
+   while($l < 10) {
+        print($l);
+        $l = $l + 1;
+   }
+   
+   int $c = fuck_the_feds($a);
+
+   # float $k = 39.010238;
+
+   bool $elk = (98 < 30);
+
+   # int $q = getarg(0);
+   # print($q);
+
+   print("HEREISASTRINGPLEASPRINTITOUT");
+
+   print(10);
+
+   cint $n = 1000000000000000;
+   cint $m = -2147483648;
+   print($m);
+
+   # cint_add_o_matic($n, $m);
+
+   cint $z = 0;
+   cint $e = $n / $z;
+
+   # cint $j = - $m;
+
+   print($a);
+
+   return $a;
+}
